@@ -1,0 +1,100 @@
+id: dnd5e
+name: D&D 5th Edition
+version: 1
+
+entities:
+  character:
+    stats:
+      - key: str
+        label: STR
+        type: integer
+        min: 1
+        max: 30
+      - key: dex
+        label: DEX
+        type: integer
+        min: 1
+        max: 30
+      - key: con
+        label: CON
+        type: integer
+        min: 1
+        max: 30
+      - key: int
+        label: INT
+        type: integer
+        min: 1
+        max: 30
+      - key: wis
+        label: WIS
+        type: integer
+        min: 1
+        max: 30
+      - key: cha
+        label: CHA
+        type: integer
+        min: 1
+        max: 30
+    hp:
+      current: hp-current
+      max: hp-max
+    fields:
+      - key: class
+        label: Class
+        type: string
+      - key: level
+        label: Level
+        type: integer
+      - key: race
+        label: Race
+        type: string
+      - key: alignment
+        label: Alignment
+        type: string
+      - key: ac
+        label: AC
+        type: integer
+      - key: speed
+        label: Speed
+        type: string
+      - key: proficiency-bonus
+        label: Proficiency bonus
+        type: integer
+
+combat:
+  dice: d20
+  initiative: dex
+  turnOrder: highest-first
+  hpTracking: true
+
+currency:
+  - key: gp
+    label: GP
+  - key: sp
+    label: SP
+  - key: cp
+    label: CP
+  - key: ep
+    label: EP
+  - key: pp
+    label: PP
+
+arcFields:
+  - key: motivation
+    label: Motivation
+  - key: secret
+    label: Secret
+  - key: current-goal
+    label: Current goal
+  - key: arc-stage
+    label: Arc stage
+
+npcFields:
+  - key: role
+    label: Role
+  - key: faction
+    label: Faction
+  - key: agenda
+    label: Agenda
+  - key: wants-from-party
+    label: Wants from party
