@@ -98,3 +98,97 @@ npcFields:
     label: Agenda
   - key: wants-from-party
     label: Wants from party
+
+archetypes:
+  - id: brute
+    label: Brute (front-line fighter)
+    boost: [str, con]
+    dump: [int, cha]
+    traits:
+      - Missing a few teeth, grins anyway
+      - Speaks in short, blunt sentences
+      - Has a scar they're oddly proud of
+      - Cracks knuckles before every threat
+  - id: skirmisher
+    label: Skirmisher (quick, ranged)
+    boost: [dex, wis]
+    dump: [str, cha]
+    traits:
+      - Never stops scanning the room
+      - Twirls a dagger absent-mindedly
+      - Speaks quietly, listens more
+      - Always sits with back to the wall
+  - id: caster
+    label: Caster (arcane or divine)
+    boost: [int, wis]
+    dump: [str, con]
+    traits:
+      - Mutters half-formed incantations
+      - Smells faintly of ozone or incense
+      - Distracted, eyes always elsewhere
+      - Collects strange trinkets
+  - id: talker
+    label: Talker (face, social)
+    boost: [cha, int]
+    dump: [str, con]
+    traits:
+      - Remembers everyone's name instantly
+      - Laughs a beat too late
+      - Dresses slightly above their station
+      - Always has an angle
+  - id: tough
+    label: Tough (durable bruiser)
+    boost: [con, str]
+    dump: [int, dex]
+    traits:
+      - Barely reacts to pain
+      - Eats constantly
+      - Slow to anger, terrifying when angry
+      - Has survived something that should have killed them
+
+conditions:
+  - name: Blinded
+    effect: Can't see, auto-fails sight checks. Attacks against have advantage; its attacks have disadvantage.
+    duration: Varies / until ended
+  - name: Charmed
+    effect: Can't attack the charmer or target them with harmful effects. Charmer has advantage on social checks.
+    duration: Varies
+  - name: Deafened
+    effect: Can't hear, auto-fails hearing checks.
+    duration: Varies
+  - name: Frightened
+    effect: Disadvantage on checks and attacks while source is in sight. Can't willingly move closer to it.
+    duration: Until ended / save
+  - name: Grappled
+    effect: Speed becomes 0. Ends if grappler is incapacitated or moved away.
+    duration: Until escaped
+  - name: Incapacitated
+    effect: Can't take actions or reactions.
+    duration: Varies
+  - name: Invisible
+    effect: Can't be seen without aid. Attacks against have disadvantage; its attacks have advantage.
+    duration: Varies
+  - name: Paralyzed
+    effect: Incapacitated, can't move or speak. Auto-fails STR/DEX saves. Attacks have advantage; hits within 5ft are crits.
+    duration: Until ended / save
+  - name: Petrified
+    effect: Turned to stone. Incapacitated, resistant to all damage, immune to poison/disease.
+    duration: Until ended
+  - name: Poisoned
+    effect: Disadvantage on attack rolls and ability checks.
+    duration: Varies / save
+  - name: Prone
+    effect: Can only crawl. Disadvantage on attacks. Melee attacks against have advantage, ranged have disadvantage.
+    duration: Until stands (half movement)
+  - name: Restrained
+    effect: Speed 0, disadvantage on attacks and DEX saves. Attacks against have advantage.
+    duration: Until escaped
+  - name: Stunned
+    effect: Incapacitated, can't move, can barely speak. Auto-fails STR/DEX saves. Attacks have advantage.
+    duration: Until ended / save
+  - name: Unconscious
+    effect: Incapacitated, drops everything, falls prone. Auto-fails STR/DEX saves. Attacks have advantage; hits within 5ft crit.
+    duration: Until ended / healed
+  - name: Exhaustion
+    effect: Levels 1-6 stack penalties from disadvantage on checks up to death at level 6.
+    duration: One level removed per long rest
